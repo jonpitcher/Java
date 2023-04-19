@@ -1,0 +1,76 @@
+//saveapril191 --- we wrote an extra method at bottom to take the string input from user for language and then match string to a hashmap an return a hashmap 
+
+//save april 19 part 2  moved if statement and german map, tried breakpoints didnt work... 
+
+
+// import java.util.HashMap;
+// import java.util.Scanner;
+
+// public class Main {
+//   public static void main(String[] args) {
+
+//    // ------------------- data
+//     HashMap<String, String> spanish = new HashMap<String, String>();
+//     spanish.put("water", "agua");
+//     // HashMap<String, String> german = new HashMap<String, String>();
+//     // german.put("water", "wasser"); 
+//     // moved down into whatLanguage method
+//     HashMap<String, String> french = new HashMap<String, String>();
+//     french.put("water", "eau");
+
+//     Scanner scanner = new Scanner(System.in);
+
+//     System.out.print("What language? \n");
+    
+//     String languageInput = scanner.nextLine().toLowerCase();
+
+//     String languageVariable = whatLanguage(languageInput); //calling method
+
+//     System.out.print(languageVariable);
+    
+//   }
+
+//   // ----------END PUBLIC STATIC MAIN
+
+//   public static String whatLanguage(String str) {
+//     HashMap<String, String> german = new HashMap<String, String>();
+//     german.put("water", "wasser");
+
+//     String reversedStr = str;
+    
+//     Scanner scanner = new Scanner(System.in);
+
+//       if (reversedStr.equals("spanish")) {
+//         System.out.print("What word? \n");
+
+//         String wordInput = scanner.nextLine().toLowerCase();
+
+//         System.out.println(german.get("water"));
+
+//       } else if (reversedStr.equals("french")) {
+
+//       // System.out.println(french.get("water"));
+
+//     } else {
+//       System.out.print("\n\n didn't work");
+//     }
+
+//     return reversedStr;
+
+    
+
+//     //we need to:
+//     //1. return language user gave into a variable
+//     //2. match it to a hashmap? 
+//     //3. figure out how to get value using the key
+//     //4. try french.get(str)
+//     //5. muliple methods 
+    
+//   }
+
+//   public static String reverseString(String str) {
+//     String reversedStr = "this string was returned in method";
+//     return reversedStr;
+//   }
+
+// }
