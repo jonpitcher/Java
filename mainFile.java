@@ -47,7 +47,7 @@ public class Main {
     
     } 
     else{
-        System.out.print("Fuck you");
+        System.out.print("didn't work");
     }
 
     //control d down arrow find each entry of a word and go to 
