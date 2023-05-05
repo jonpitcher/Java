@@ -1,0 +1,86 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red199\green203\blue211;\red52\green54\blue66;\red208\green208\blue220;
+\red39\green40\blue50;\red39\green129\blue201;\red0\green0\blue0;\red255\green255\blue255;\red235\green16\blue47;
+\red212\green20\blue102;\red226\green131\blue14;\red20\green152\blue106;}
+{\*\expandedcolortbl;;\cssrgb\c81961\c83529\c85882;\cssrgb\c26667\c27451\c32941;\cssrgb\c85098\c85098\c89020;
+\cssrgb\c20392\c20784\c25490;\cssrgb\c18039\c58431\c82745;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c94902\c17255\c23922;
+\cssrgb\c87451\c18824\c47451;\cssrgb\c91373\c58431\c4706;\cssrgb\c0\c65098\c49020;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat2\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat3\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid201\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 In Java, a constructor is a special method that is called when an object is created. The main purpose of a constructor is to initialize the object's state. Here are three examples of why constructors are useful in Java:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Initializing instance variables: Constructors are often used to initialize the instance variables of an object. For example, suppose we have a class called 
+\f1\fs28 Person
+\f0\fs32  that has instance variables 
+\f1\fs28 name
+\f0\fs32  and 
+\f1\fs28 age
+\f0\fs32 . We can create a constructor that takes in the name and age of the person as parameters and sets the corresponding instance variables.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18 \cf4 \cb5 \strokec4 java\cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 Copy code
+\f1\fs21 \cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb7 \strokec6 public\cf8 \strokec8  \cf6 \strokec6 class\cf8 \strokec8  \cf9 \strokec9 Person\cf8 \strokec8  \{ \cf6 \strokec6 private\cf8 \strokec8  String name; \cf6 \strokec6 private\cf8 \strokec8  \cf10 \strokec10 int\cf8 \strokec8  age; \cf6 \strokec6 public\cf8 \strokec8  \cf9 \strokec9 Person\cf8 \strokec8 (String name, \cf10 \strokec10 int\cf8 \strokec8  age) \{ \cf11 \strokec11 this\cf8 \strokec8 .name = name; \cf11 \strokec11 this\cf8 \strokec8 .age = age; \} \}\cf2 \cb1 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f0\fs32 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Ensuring object consistency: Constructors can also be used to ensure that an object is created in a consistent state. For example, suppose we have a class called 
+\f1\fs28 Rectangle
+\f0\fs32  that has instance variables 
+\f1\fs28 width
+\f0\fs32  and 
+\f1\fs28 height
+\f0\fs32 . We can create a constructor that takes in the width and height of the rectangle as parameters and ensures that they are both non-negative.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18 \cf4 \cb5 \strokec4 java\cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 Copy code
+\f1\fs21 \cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb7 \strokec6 public\cf8 \strokec8  \cf6 \strokec6 class\cf8 \strokec8  \cf9 \strokec9 Rectangle\cf8 \strokec8  \{ \cf6 \strokec6 private\cf8 \strokec8  \cf10 \strokec10 int\cf8 \strokec8  width; \cf6 \strokec6 private\cf8 \strokec8  \cf10 \strokec10 int\cf8 \strokec8  height; \cf6 \strokec6 public\cf8 \strokec8  \cf9 \strokec9 Rectangle\cf8 \strokec8 (\cf10 \strokec10 int\cf8 \strokec8  width, \cf10 \strokec10 int\cf8 \strokec8  height) \{ \cf6 \strokec6 if\cf8 \strokec8  (width < \cf10 \strokec10 0\cf8 \strokec8  || height < \cf10 \strokec10 0\cf8 \strokec8 ) \{ \cf6 \strokec6 throw\cf8 \strokec8  \cf6 \strokec6 new\cf8 \strokec8  \cf9 \strokec9 IllegalArgumentException\cf8 \strokec8 (\cf12 \strokec12 "Width and height must be non-negative"\cf8 \strokec8 ); \} \cf11 \strokec11 this\cf8 \strokec8 .width = width; \cf11 \strokec11 this\cf8 \strokec8 .height = height; \} \}\cf2 \cb1 \strokec2 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f0\fs32 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Dependency injection: Constructors can also be used for dependency injection, which is a design pattern where an object's dependencies are provided to it through its constructor. For example, suppose we have a class called 
+\f1\fs28 Order
+\f0\fs32  that needs a 
+\f1\fs28 Customer
+\f0\fs32  object to be created. We can create a constructor for 
+\f1\fs28 Order
+\f0\fs32  that takes in a 
+\f1\fs28 Customer
+\f0\fs32  object as a parameter.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs18 \cf4 \cb5 \strokec4 java\cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 Copy code
+\f1\fs21 \cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb7 \strokec6 public\cf8 \strokec8  \cf6 \strokec6 class\cf8 \strokec8  \cf9 \strokec9 Order\cf8 \strokec8  \{ \cf6 \strokec6 private\cf8 \strokec8  Customer customer; \cf6 \strokec6 public\cf8 \strokec8  \cf9 \strokec9 Order\cf8 \strokec8 (Customer customer) \{ \cf11 \strokec11 this\cf8 \strokec8 .customer = customer; \} \}\cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 Overall, constructors are an important part of Java classes and are used to initialize instance variables, ensure object consistency, and support dependency injection.\
+}
