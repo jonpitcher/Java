@@ -1,0 +1,50 @@
+jonathan.pitcher@MREMBF049287 test % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .vscode/settings.json
+        new file:   README.md
+        new file:   bin/App.class
+        new file:   src/App.java
+
+jonathan.pitcher@MREMBF049287 test % git commit -m
+error: switch `m' requires a value
+jonathan.pitcher@MREMBF049287 test % git commit -m "test"
+[main (root-commit) a441c23] test
+ 4 files changed, 31 insertions(+)
+ create mode 100644 .vscode/settings.json
+ create mode 100644 README.md
+ create mode 100644 bin/App.class
+ create mode 100644 src/App.java
+jonathan.pitcher@MREMBF049287 test % git add .    
+jonathan.pitcher@MREMBF049287 test % git commit -m "test"
+On branch main
+nothing to commit, working tree clean
+jonathan.pitcher@MREMBF049287 test % git add .
+jonathan.pitcher@MREMBF049287 test % git commit -m "test2"
+[main b690f9f] test2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+jonathan.pitcher@MREMBF049287 test % git remote add origin;4C;2D https://github.com/omelean2/Restaurant-app.g;4D;4D
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+zsh: command not found: 4C
+zsh: command not found: 2D
+zsh: command not found: 4D
+zsh: command not found: 4D
+jonathan.pitcher@MREMBF049287 test % https://github.com/jonpitcher/ProjectsWithJoshu
+zsh: no such file or directory: https://github.com/jonpitcher/ProjectsWithJoshu
+jonathan.pitcher@MREMBF049287 test % git remote add origin https://github.com/jonpitcher/ProjectsWithJoshua
+error: remote origin already exists.
+jonathan.pitcher@MREMBF049287 test % 
