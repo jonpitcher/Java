@@ -1,0 +1,83 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+class Book {
+    String title; 
+    String author; 
+    String genre; 
+    double price; 
+ 
+     void buyBook() {
+         System.out.println("this is a book");
+     }
+
+     public String getTitle(){
+        return title;
+     }
+     
+     public void setTitle(String newTitle){
+        this.title = newTitle; 
+     }
+ }
+
+ class User {
+
+    String name; 
+    String email; 
+    String password; 
+
+    public String getName(){
+        return name;
+     }
+     
+     public void setName(String newName){
+        this.name = newName; 
+     }
+
+ } 
+
+ //java.util.list is an interface java so we have to use an array list 
+
+ class shoppingCart {
+
+    ArrayList<String> purchasedBooks = new ArrayList<String>();
+
+    //purchasedBooks.add("Harry Potter");
+
+ } 
+ 
+ class FictionBook extends Book {
+     @Override
+     void buyBook() {
+         System.out.println("this is a fictionbook");
+     }
+ }
+ 
+ class NonFictionBook extends Book {
+     @Override
+     void buyBook() {
+         System.out.println("this is a nonFictionbook");
+     }
+ }
+
+//  class exampleClass extends Book {
+//     @Override
+//     void buyBook() {
+//         System.out.println("this is a nonFictionbook");
+//     }
+// }
+
+ 
+ public class App {
+     public static void main(String[] args) {
+         Book book1 = new Book();
+         Book book2 = new FictionBook();
+         Book book3 = new NonFictionBook();
+         // animal3 = new Cat();
+ 
+         book1.buyBook();  // Output: The animal makes a sound.
+         book2.buyBook();  // Output: The dog barks.
+         book3.buyBook();  // Output: The cat meows.
+     }
+ }
