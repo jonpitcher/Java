@@ -1,0 +1,33 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+        Language abstractClassCall = new Language();
+        Language Word2 = new Spanish();
+        Language Word3 = new German();
+
+        abstractClassCall.translate();  
+        Word2.translate();  
+        Word3.translate();  
+    }
+}
+
+class Language {
+    void translate() {
+        System.out.println("This abstract class changes when using polymorphism");
+    }
+}
+
+class Spanish extends Language {
+    @Override
+    void translate() {
+        System.out.println("Agua");
+    }
+}
+
+class German extends Language {
+    @Override
+    void translate() {
+        System.out.println("Wasser");
+    }
+}
+
+*/
