@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class DiamondOperatorExample {
+    public static void main(String[] args) {
+        // Create an ArrayList of Strings using the diamond operator
+        ArrayList<String> names = new ArrayList<>(); //here <> is the diamond operator 
+
+        // Add elements to the ArrayList
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+        names.add("Dave");
+
+        // Print the elements of the ArrayList
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+}
