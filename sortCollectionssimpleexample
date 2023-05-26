@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class SortExample {
+    public static void main(String[] args) {
+        // Create an ArrayList of Strings
+        ArrayList<String> names = new ArrayList<>();
+
+        // Add elements to the ArrayList
+        names.add("Alice");
+        names.add("Charlie");
+        names.add("Bob");
+        names.add("Dave");
+
+        // Sort the ArrayList in ascending order
+        Collections.sort(names);
+
+        // Print the sorted elements of the ArrayList
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+}
