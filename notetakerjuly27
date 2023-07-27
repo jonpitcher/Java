@@ -1,0 +1,88 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+
+            ArrayList<String> fruits = new ArrayList<>();
+            
+            fruits.add("pear"); 
+            fruits.add("kiwi"); 
+            fruits.add("orange");
+            fruits.add("zucchini");  
+            fruits.add("apple"); 
+            fruits.add("strawberry"); 
+            fruits.remove(2);
+
+            
+
+            System.out.println("\n The fruits already available are: \n");
+
+            for (String element : fruits){
+        
+            System.out.println("Fruit: " + element + " ----> Index: " + fruits.indexOf(element));
+        
+    }       Collections.sort(fruits);
+    
+            Collections.sort(fruits, Collections.reverseOrder());
+    
+            System.out.println(fruits);
+
+            System.out.println("entire list writing only list name" + fruits);
+
+            
+
+            //writing   System.out.println(fruits); --- gives you an ugly list with brackets... 
+
+            System.out.println(" \n Please use one of the following commands: \n 1. Add \n 2. Delete \n 3. Show all fruits");
+
+            System.out.println(" \n What do you want to add? ");
+
+            Scanner scanner = new Scanner(System.in);
+            String userInput = scanner.nextLine();
+            fruits.add(userInput);
+
+            System.out.println(" \n What do you want to delete? ");
+
+            Scanner scanner3 = new Scanner(System.in);
+            String userInput3 = scanner3.nextLine();
+
+           int convertedToInt = Integer.parseInt(userInput3);
+
+            fruits.remove(convertedToInt);
+            
+            for (String element : fruits){
+        
+            System.out.println("Fruit: " + element + " ----> Index: " + fruits.indexOf(element));
+        
+    }
+
+            
+            
+            //System.out.println(fruits.get(1));
+        
+            //System.out.println(fruits.indexOf("strawberry"));
+        
+            //System.out.println("provide a new fruit");
+
+
+ 
+
+
+
+            //System.out.println("you provided a new fruit see below");
+            //System.out.println(fruits.get(3));
+        
+
+
+      
+    }
+
+//     public static <T extends Comparable<? super T>> void sort(List<T> fruits){
+
+//     }
+
+}
+    
