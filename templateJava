@@ -1,0 +1,196 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+class Book {
+    String title; 
+    String author; 
+    String genre; 
+    double price; 
+ 
+     void buyBook() {
+         System.out.println("this is a book");
+     }
+
+     public String getTitle(){
+        return title;
+     }
+     
+     public void setTitle(String newTitle){
+        this.title = newTitle; 
+     }
+ }
+
+ class User {
+
+    String name; 
+    String email; 
+    String password; 
+
+    public String getName(){
+        return name;
+     }
+     
+     public void setName(String newName){
+        this.name = newName; 
+     }
+
+ } 
+
+ //java.util.list is an interface java so we have to use an array list 
+
+ class shoppingCart {
+
+    ArrayList<String> purchasedBooks = new ArrayList<String>();
+
+    //purchasedBooks.add("Harry Potter");
+
+ } 
+ 
+ class FictionBook extends Book {
+     @Override
+     void buyBook() {
+         System.out.println("Harry Potter");
+         System.out.println("Twilight");
+     }
+ }
+ 
+ class NonFictionBook extends Book {
+     @Override
+     void buyBook() {
+         System.out.println("Biography of Winston Churchil");
+         System.out.println("WWII");
+     }
+ }
+
+ class Catalog{
+
+    ArrayList<String> myCatalog = new ArrayList<String>(); //using new here I am initializing the instance variable 
+    //this.add("Harry Potter");
+    //need a constructor here to intitialize the instance variables or may get an error 
+ 
+    public void addElementToList(String element) {
+        myCatalog.add(element); //ADD then we don't need a SETTER? 
+    }
+
+    public String getElementFromList(int index) {
+         return myCatalog.get(index);
+    }
+
+    public void showCatalog() {
+        for(int index = 0; index < myCatalog.size(); index ++) {
+            System.out.println(index + 1 + " " + myCatalog.get(index));
+        }
+    }
+     
+}
+
+//can only call the super class -
+
+
+ public class App {
+     public static void main(String[] args) {
+        
+         Book fictionBooks = new FictionBook();
+         Book nonFictionBooks = new NonFictionBook();
+         Catalog myCatalog = new Catalog();  //cannot do Book myOrder since you are callling the same page 
+        
+         myCatalog.addElementToList("Harry potter");
+         myCatalog.addElementToList("Twightlight");
+         myCatalog.addElementToList("WWII");
+
+         System.out.println("Welcome user! The available books are: ");
+
+         fictionBooks.buyBook();  // Output: The dog barks.
+
+         nonFictionBooks.buyBook();  // Output: The cat meows.
+
+         System.out.println("What book would you like to order? ");
+         
+         System.out.println(myCatalog.getElementFromList(0));
+
+        myCatalog.showCatalog();
+         // System.out.println(myCatalog.showCatalog()); THIS DOES NOTT WORK JUST GET RID OF PRINTLN SINCE UR NOT GIVING INFORMATIOON
+        
+
+     }
+ }
+
+ //----OLD MAIN JUNK
+          //Book book1 = new Book();
+  // animal3 = new Cat();
+ //  book1.buyBook();  // Output: The animal makes a sound.
+ //  fictionBooks.buyBook();  // Output: The dog barks.
+//  nonFictionBooks.buyBook();  // Output: The cat meows.
+
+
+
+ //  class exampleClass extends Book {
+//     @Override
+//     void buyBook() {
+//         System.out.println("this is a nonFictionbook");
+//     }
+// }
+
+
+
+// public class App {
+//     public static void main(String[] args) throws Exception {
+//         Vehicle vehicle = new Car();
+//         Car car = (Car) vehicle;
+//         car.drive();                      // Output: Driving the vehicle
+//         car.honk();   
+//     }
+// }
+
+
+// class Vehicle {
+//     public void drive() {
+//         System.out.println("Driving the vehicle");
+//     }
+// }
+
+// class Car extends Vehicle {
+//     public void honk() {
+//         System.out.println("Car honking");
+//     }
+// }
+
+// public class CastingExample {
+//     public static void main(String[] args) {
+//                     // Output: Car honking
+//     }
+// }
+/* 
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        Language abstractClassCall = new Language();
+        Language Word2 = new Spanish();
+        Language Word3 = new German();
+
+        abstractClassCall.translate();  
+        Word2.translate();  
+        Word3.translate();  
+    }
+}
+
+class Language {
+    void translate() {
+        System.out.println("This abstract class changes when using polymorphism");
+    }
+}
+
+class Spanish extends Language {
+    @Override
+    void translate() {
+        System.out.println("Agua");
+    }
+}
+
+class German extends Language {
+    @Override
+    void translate() {
+        System.out.println("Wasser");
+    }
+}
