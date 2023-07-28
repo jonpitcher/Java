@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class App {
+  static Scanner scanner = new Scanner(System.in);
+  
+  public static void main(String[] args) {
+
+    App myRestaurant = new App();
+    //we had to put this here because Menu myMenu wasn't letting us do a new Menu()
+    
+    Scanner myScanner = new Scanner(System.in);
+
+    System.out.println("Test output");
+
+  }
+
+  class Menu {
+
+    //instance variables, not static, cannot be used willy nilly, must instantiate the Menu to use these vars
+    private String[] dishes = new String[3];
+    
+    }
+
+
+    void showMenu() {
+        for(int index = 0; index < 10 ; index ++) { //  dishes.length; index ++) {
+            System.out.println( "test"); //index + 1 + " " + dishes[index]);
+        }
+      
+    }
+    
+    int getPrice(int dishIndex) {
+        
+         return 2;
+    }
+    String getDish(int dishIndex) {
+
+      return "test";
+      
+    }
+  }  
+
+  class Order{
+
+    //placeholder int
+    int instanceVariable = 5;
+   
+    void addDish(){
+
+    }
+
+    void printOrder() {
+
+    }
+  }
