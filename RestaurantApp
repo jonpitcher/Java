@@ -1,0 +1,135 @@
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+class Restaurant {
+  static Scanner scanner = new Scanner(System.in);
+  
+  public static void main(String[] args) {
+
+    Restaurant myRestaurant = new Restaurant();
+    //we had to put this here because Menu myMenu wasn't letting us do a new Menu()
+    
+    Menu myMenu = myRestaurant.new Menu();
+    
+    Order myOrder = myRestaurant.new Order();
+
+    Scanner myScanner = new Scanner(System.in);
+
+    int currentOrderIndex = 0;
+    int currentOrderQuantity = 0;
+
+
+    while(true) {
+      System.out.println("What would you like to order? Enter a number from the list below, or 0 if you want to end your order.");
+      myMenu.showMenu();
+      
+      try {//we're going to assume the user will always enter a number, error handling will come later
+      currentOrderIndex = myScanner.nextInt();
+
+      if(currentOrderIndex == 0) {
+        System.out.print(myOrder.calculateTotalCost());
+        break;
+      }
+
+      if(currentOrderIndex > myMenu.getDishes().length){
+          System.out.println("Introduce a valid number");
+          continue;
+      }
+      
+      System.out.println("How many " + myMenu.getDish(currentOrderIndex - 1) + "s would you like?");
+      currentOrderQuantity = myScanner.nextInt();
+      } catch (InputMismatchException e){
+
+          System.out.println("Enter a valid number");
+          myScanner.nextLine();
+          continue;
+
+      }
+
+      myOrder.addDish(myMenu.getDish(currentOrderIndex - 1), currentOrderQuantity, myMenu.getPrice(currentOrderIndex - 1));     
+    }
+
+    myScanner.close();
+
+    //take user input (several items)
+    //return the total amount of the order
+    // myOrder.addDish("Cheeseburger", 3, myMenu.getPrice(0));
+    // myOrder.addDish("Caesar Salad", 2, myMenu.getPrice(1));
+    // myOrder.addDish("Grilled Chicken Sandwich", 4, myMenu.getPrice(2));
+    
+  }
+
+  class Menu {
+
+    //instance variables, not static, cannot be used willy nilly, must instantiate the Menu to use these vars
+    private String[] dishes = new String[3];
+    private double[] prices = new double[3];
+    
+    Menu() {
+        this.dishes[0] = "Cheeseburger"; 
+        this.dishes[1] = "Caesar Salad"; 
+        this.dishes[2] = "Grilled Chicken Sandwich"; 
+
+        this.prices[0] = 8.99; 
+        this.prices[1] = 7.50; 
+        this.prices[2] = 9.75; 
+    }
+
+    public String[] getDishes() {
+        return this.dishes;
+    }
+
+    void showMenu() {
+        for(int index = 0; index < dishes.length; index ++) {
+            System.out.println(index + 1 + " " + dishes[index]);
+        }
+      
+    }
+    
+    double getPrice(int dishIndex) {
+        //first pass, we need to be able to take multiple indexes and handle for if index is out of bounds
+        return prices[dishIndex];
+    }
+    String getDish(int dishIndex) {
+      return dishes[dishIndex];
+    }
+  }  
+
+  class Order{
+
+    //placeholder int
+    int tempIntPlaceholder = 5;
+    //contains ordered dishes
+    ArrayList<String> orderedDishes = new ArrayList<String>();
+    //contains quantity ordered
+    ArrayList<Integer> quantities = new ArrayList<Integer>();
+    //we needed to extend the primitive int, and use a class Integer for ue in the ArrayList class
+    ArrayList<Double> prices = new ArrayList<Double>();
+    double totalPrice = 0;
+
+    
+    void addDish(String dish, int quantity, double price){
+        this.orderedDishes.add(dish);
+        this.quantities.add(quantity);
+        this.prices.add(price);
+        //to access instance variables we need to use the "this" keyword
+    }
+
+    double calculateTotalCost() {
+        for(int index = 0; index < prices.size(); index ++) {
+          this.totalPrice += quantities.get(index) * prices.get(index);
+        }
+        return totalPrice;
+    }
+    void printOrder() {
+      //this method is for debugging
+      for(int index = 0; index < prices.size(); index ++) {
+        System.out.println(orderedDishes.get(index));
+        System.out.println(quantities.get(index));
+        System.out.println(prices.get(index));
+        System.out.println("---------");
+      }
+    }
+  }
+}
